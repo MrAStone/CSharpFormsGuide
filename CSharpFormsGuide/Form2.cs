@@ -30,7 +30,7 @@ namespace CSharpFormsGuide
 
         private void F3_FormClosing(object? sender, FormClosingEventArgs e)
         {
-            this.Visible = true;
+            this.Visible = true; // when form3 closes, show this form again
         }
     }
 }
