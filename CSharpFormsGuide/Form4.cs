@@ -28,7 +28,7 @@ namespace CSharpFormsGuide
             MySqlConnection con = new MySqlConnection("server = srv1475.hstgr.io;uid=u381396247_tester;pwd=:3ylKqjBAG;database=u381396247_tester");
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            string SQL = "SELECT testID FROM Test1";
+            string SQL = "SELECT TestDetails FROM Test1";
             cmd.CommandText = SQL;
             cmd.Connection = con;
             string output = "";
