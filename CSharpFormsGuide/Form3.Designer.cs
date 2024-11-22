@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(679, 46);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(15, 18);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(617, 402);
+            panel1.TabIndex = 1;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
             Controls.Add(button1);
             Name = "Form3";
             Text = "Form3";
@@ -55,5 +57,6 @@
         #endregion
 
         private Button button1;
+        private Panel panel1;
     }
 }

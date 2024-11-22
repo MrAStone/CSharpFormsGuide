@@ -18,48 +18,31 @@ namespace CSharpFormsGuide
         public Form3()
         {
             InitializeComponent();
-           g = CreateGraphics();
-            this.SizeChanged += Form3_SizeChanged;
+            g = CreateGraphics(); // create a graphics component
+            panel1.Paint += new PaintEventHandler(panel1_Paint); //event to draw in the panel
+            this.SizeChanged += Form3_SizeChanged; // event when form size is changed
         }
 
-        private void Form3_SizeChanged(object? sender, EventArgs e)
+        private void Form3_SizeChanged(object? sender, EventArgs e) //will run when form is resized
         {
-            ClearColor();
-        }
-
-        private void doThing()
-        {
+            panel1.Width = this.Width - 100; // change panel width to scale with form
+            panel1.Height = this.Height - 100; // change panel height to scale with form
+            panel1.Invalidate(); // remove graphics from the panel
 
         }
-        protected override void OnPaint(PaintEventArgs e)
+        
+        private void panel1_Paint(object? sender, PaintEventArgs e) //paint event for drawing graphics
         {
-            base.OnPaint(e);
-            // this is a comment
-            int x, y;
-            x = this.Width;
-            y = this.Height;
-            Pen p = new Pen(Color.Black, 10);
-            g.DrawLine(p,0,0,x-20,y-20);
-           // g.DrawEllipse(p, 100, 100, 100, 100);
 
+            Panel p =sender as Panel; // set the panel to be used
+            Graphics g = e.Graphics; // needed for drawing
+          
+            g.FillRectangle(new SolidBrush(Color.RebeccaPurple),p.DisplayRectangle); // create a rectangle for the whole panel
+            g.DrawLine(new Pen(Color.Green,10),p.Left+5,p.Top+5,p.Width-5,p.Height-5); // draw a line in the panel
         }
-        private void ClearColor()
-        {
-            g.Clear(Color.White);
-        }
-        private void drawGraph()
-        {
-            // this is a comment
-            Graphics g = CreateGraphics();
-            Pen p = new Pen(Color.LemonChiffon, 10);
-            g.DrawLine(p, 100, 100, 100, 500);
-            g.DrawEllipse(p, 100, 100, 100, 100);
+        
+       
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            drawGraph();
-        }
+      
     }
 }
