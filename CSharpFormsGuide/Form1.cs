@@ -5,13 +5,13 @@ namespace CSharpFormsGuide
         Form2 f2;
         public Form1()
         {
-            
+
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             f2 = new Form2(textBox1.Text); // load Form2 with the parameter of the textbox data
             f2.Show(); // show form 2
             f2.FormClosing += F2_FormClosing; // add event listener for closing form2
@@ -24,8 +24,18 @@ namespace CSharpFormsGuide
         {
             this.Visible = true; // when form2 closes show this one again
         }
-               
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4(); // load Form2 with the parameter of the textbox data
+            f4.Show(); // show form 2
+            f4.FormClosing += F4_FormClosing; ; // add event listener for closing form2
+            this.Visible = false; //hide this form
+        }
 
+        private void F4_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            this.Visible = true; // when form4 closes show this one again
+        }
     }
 }

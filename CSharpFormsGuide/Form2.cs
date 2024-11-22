@@ -22,7 +22,7 @@ namespace CSharpFormsGuide
 
         private void button1_Click(object sender, EventArgs e)
         {
-            f3 = new Form3(); 
+            f3 = new Form3();
             f3.Show();
             f3.FormClosing += F3_FormClosing;
             this.Visible = false;
@@ -31,6 +31,12 @@ namespace CSharpFormsGuide
         private void F3_FormClosing(object? sender, FormClosingEventArgs e)
         {
             this.Visible = true; // when form3 closes, show this form again
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+            WindowState = FormWindowState.Maximized; // make form full screen
         }
     }
 }

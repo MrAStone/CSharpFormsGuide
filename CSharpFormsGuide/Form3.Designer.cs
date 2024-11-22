@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             panel1 = new Panel();
             SuspendLayout();
-            // 
-            // button1
-            // 
             // 
             // panel1
             // 
             panel1.Location = new Point(15, 18);
             panel1.Name = "panel1";
-            panel1.Size = new Size(617, 402);
+            panel1.Size = new Size(757, 406);
             panel1.TabIndex = 1;
             // 
             // Form3
@@ -48,7 +44,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Controls.Add(button1);
             Name = "Form3";
             Text = "Form3";
             ResumeLayout(false);
