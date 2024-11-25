@@ -13,9 +13,11 @@ this line and panel scale with changes in the form size
 Each time a form opens the previous form is hidden.  When a form closes the previous form is shown again
 
 The Database Data buton on Form1 loads data from a database (test server with SELECT only access) and shows the data in a number of different ways
+
 ![image](https://github.com/user-attachments/assets/dcaf00e1-087c-43d1-8870-ce6ca61c3fef)
 
 button1 in this form loads the graphing data (data from the database and some random data)
+
 ![image](https://github.com/user-attachments/assets/95e7aba2-5d27-469b-8ff0-ac757312391e)
 
 This also scales with resizing of the form
