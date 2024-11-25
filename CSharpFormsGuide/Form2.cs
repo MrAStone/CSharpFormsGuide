@@ -17,7 +17,7 @@ namespace CSharpFormsGuide
         public Form2(string someText) //added parameter to form initialisation
         {
             InitializeComponent();
-            label1.Text = someText;
+            label1.Text = someText; // set the label text to the parameter
         }
 
         private void button1_Click(object sender, EventArgs e)

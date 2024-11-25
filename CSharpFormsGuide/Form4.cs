@@ -29,20 +29,19 @@ namespace CSharpFormsGuide
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
             string SQL = "SELECT TestDetails FROM Test1";
-            cmd.CommandText = SQL;
-            cmd.Connection = con;
-            string output = "";
-            MySqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            cmd.CommandText = SQL; // set the command text
+            cmd.Connection = con; // set the connection
+                        MySqlDataReader dr = cmd.ExecuteReader(); // execute the SQL command
+            while (dr.Read()) // read the data
             {
-                int dataRead = dr.GetInt32(0);
+                int dataRead = dr.GetInt32(0); // get the data from the first column
                 listBox1.Items.Add(dataRead); // listbox shows data in a list
                 listView1.Items.Add(dataRead.ToString());//list view needs a string data
                 comboBox1.Items.Add(dataRead);// combobox is a dropdown menu
-                data.Add(dataRead);
+                data.Add(dataRead); // add the data to the list
 
             }
-            con.Close();
+            con.Close(); // close the connection
 
         }
 

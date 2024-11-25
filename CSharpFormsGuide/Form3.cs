@@ -13,12 +13,10 @@ namespace CSharpFormsGuide
 {
     public partial class Form3 : Form
     {
-        Random rng = new Random();
-        Graphics g;
+      
         public Form3()
         {
             InitializeComponent();
-            g = CreateGraphics(); // create a graphics component
             panel1.Paint += new PaintEventHandler(panel1_Paint); //event to draw in the panel
             this.SizeChanged += Form3_SizeChanged; // event when form size is changed
         }
@@ -34,7 +32,7 @@ namespace CSharpFormsGuide
         private void panel1_Paint(object? sender, PaintEventArgs e) //paint event for drawing graphics
         {
 
-            Panel p =sender as Panel; // set the panel to be used
+            Panel p = panel1; // give panel a shorter name
             Graphics g = e.Graphics; // needed for drawing
           
             g.FillRectangle(new SolidBrush(Color.RebeccaPurple),p.DisplayRectangle); // create a rectangle for the whole panel
