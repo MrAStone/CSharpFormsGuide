@@ -54,6 +54,10 @@ namespace CSharpFormsGuide
             panel1.Height = this.Height-75;
             panel1.Location = new Point(10,10);
             y = panel1.Location.Y + panel1.Height - 10;
+            label1.Text = panel1.Height.ToString();
+            label2.Text = myData.Max().ToString();
+
+
             panel1.Invalidate();
            
             
@@ -73,10 +77,11 @@ namespace CSharpFormsGuide
             {
                                 int d = myData[i];
                 //  MessageBox.Show(y.ToString());
+                d = (pp.Height / myData.Max()) * d;
                 g.DrawLine(p, x, t, x + pp.Width/count, y - (d));
-                int r = rng.Next(1, pp.Height);
-                g.DrawLine(p2, x, s, x + pp.Width / count, y - r);
-                s = y - r;
+                //int r = rng.Next(1, pp.Height);
+                //g.DrawLine(p2, x, s, x + pp.Width / count, y - r);
+               // s = y - r;
                 x = x + pp.Width/count;
                 t = y - d;
             }
