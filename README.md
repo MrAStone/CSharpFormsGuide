@@ -6,5 +6,7 @@ Form2 button opens up a form in full screen with data from the textbox
 
 button1 opens up a form with a line drawn in a panel
 
-![image](https://github.com/user-attachments/assets/e7cdbbbe-78fe-4797-921d-5962c6353e10) this line and panel scale with changes in the form size ![image](https://github.com/user-attachments/assets/d2d174df-3a58-4c70-a691-1fb175630c6e)
+![image](https://github.com/user-attachments/assets/e7cdbbbe-78fe-4797-921d-5962c6353e10)  ![image](https://github.com/user-attachments/assets/d2d174df-3a58-4c70-a691-1fb175630c6e)
+
+this line and panel scale with changes in the form size
 
