@@ -33,9 +33,10 @@
             // 
             // panel1
             // 
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Location = new Point(25, 18);
             panel1.Name = "panel1";
-            panel1.Size = new Size(755, 416);
+            panel1.Size = new Size(518, 286);
             panel1.TabIndex = 0;
             // 
             // Form5
